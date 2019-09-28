@@ -14,10 +14,19 @@ body {
   background-repeat: no-repeat;
 }
 p {
-  color: #f0f0f0;
+  color: #FFFFFF;
   font-size: 16pt;
   margin: 2pt;
   padding: 0pt;
+}
+p a {
+  color: #f0f0f0;
+  font-weight: 900;
+  text-decoration: none;
+  font-size: 16pt;
+  margin: 2pt;
+  padding: 0pt;
+}
 li {
   float: left;
 }
