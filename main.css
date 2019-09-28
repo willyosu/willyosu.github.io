@@ -36,6 +36,7 @@ ul.header {
   padding: 0;
 }
 li.header {
+  color: rgba(0, 0, 0, 0.0);
   float: left;
 }
 div.header {
