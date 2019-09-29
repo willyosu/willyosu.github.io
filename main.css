@@ -53,14 +53,14 @@ a.header {
   font-weight: 900;
   text-decoration: none;
   display: block;
-  padding: 12px 16px;
+  padding: 4px 12px;
 }
 a.header:hover {
   color: #FFFFFF;
   font-weight: 900;
   text-decoration: none;
   display: block;
-  padding: 12px 16px;
+  padding: 4px 12px;
 }
 table.header {
   font-size: 18pt;
