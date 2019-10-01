@@ -15,14 +15,14 @@ body {
 }
 p {
   color: #1a1a1a;
-  font-weight: 900;
-  font-size: 16pt;
+  font-weight: 500;
+  font-size: 15pt;
   margin: 2pt;
   padding: 0pt;
 }
 p a {
   color: #1a1a1a;
-  font-weight: 900;
+  font-weight: 700;
   text-decoration: none;
   margin: 2pt;
   padding: 0pt;
