@@ -16,10 +16,11 @@ p {
   padding: 0pt;
 }
 p.masterpiece {
-  font-size: 11pt;
-  font-style: normal;
+  font-size: 10pt;
+  font-style: italic;
 }
-p a.masterpiece {
+p.masterpiece a {
+  color: #eeeeee;
   text-shadow: 0 0 3px #eeeeee;
   font-size: 12pt;
   font-style: normal;
