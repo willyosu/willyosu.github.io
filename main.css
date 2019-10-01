@@ -11,7 +11,7 @@ body {
   background-repeat: no-repeat;
 }
 p {
-  font-size: 14pt;
+  font-size: 12pt;
   margin: 2pt;
   padding: 0pt;
 }
@@ -19,7 +19,7 @@ p.masterpiece {
   font-size: 11pt;
   font-style: normal;
 }
-p.masterpiece a {
+p a.masterpiece {
   text-shadow: 0 0 3px #eeeeee;
   font-size: 12pt;
   font-style: normal;
