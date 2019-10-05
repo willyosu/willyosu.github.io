@@ -15,3 +15,12 @@ p {
   margin: 2pt;
   padding: 0pt;
 }
+a {
+  color: #FFFFFF;
+  font-weight: 600;
+  text-decoration: none;
+}
+a:hover {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
