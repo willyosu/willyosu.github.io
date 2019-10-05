@@ -1,38 +1,99 @@
 <!DOCTYPE html PUBLIC>
 <html>
 	<head>
-		<title>willy.moe - masterpieces</title>
+		<title>willy.moe - home</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta name="google-site-verification" content="BzVh2RKpHy2BQCpsMQHeF3xotfbLzWn4V6Nn2-8Usf0" />
-		<link href="https://fonts.googleapis.com/css?family=Exo+2:400&display=swap" rel="stylesheet">
+		<link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="main.css">
 		<style>
-			p.masterpiece {font-size: 10pt; font-style: italic;}
-			p.masterpiece a {color: #eeeeee; text-shadow: 0 0 3px #eeeeee; font-size: 12pt; font-style: normal; text-decoration: none;}
+			ul.header { display: inline; list-style-type: none; font-size: 20pt; color: rgba(0, 0, 0, 0.0); margin: 0; padding: 0; }
+			li.header { color: inherit; float: left; }
+			div#banner { position: relative; width: 100%; height: 100%; transition: height 0.25s linear 0s; }
+			div#content { position: absolute; width: 100%; height: 100%; transition: height 0.25s linear 0s; }
+			div.header { font-family: 'Abel', sans-serif !important; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; color: #ffffff; background-color: rgba(0, 0, 0, 1.00); }
+			a.header { color: #ffffff;; font-weight: 900; text-decoration: none; display: block; padding: 4px 12px; }
+			a.header:hover { color: #ffffff;; font-weight: 900; text-decoration: none; display: block; padding: 4px 12px; }
+			table.header { border-collapse: separate; margin: 5px; }
+			tr.header { vertical-align: middle; }
+			td.header { vertical-align: inherit; padding: 10px; }
 		</style>
 		<link rel="icon" type="image/png" href="/favicon.png">
+		<script>
+			function yScroll(){
+				banner = document.getElementById("banner");
+				menu = document.getElementById("menu");
+				content = document.getElementById("content")
+				if(window.pageYOffset > 0) {
+					content.style.height = document.body.clientHeight-menu.offsetHeight;
+					content.style.top = menu.offsetHeight-3;
+					banner.style.height = menu.offsetHeight;
+					banner.style.top = window.pageYOffset-3;
+					menu.style.top = (menu.offsetHeight/2);
+					menu.style.backgroundColor = "rgba(0, 0, 0, 0.50)";
+				} else {
+					content.style.height = document.body.clientHeight;
+					content.style.top = document.body.clientHeight-3;
+					banner.style.height = "100%";
+					banner.style.top = 0-3;
+					menu.style.top = "50%";
+					menu.style.backgroundColor = "rgba(0, 0, 0, 1.00)";
+				}
+			}
+			window.addEventListener("scroll", yScroll);
+		</script>
 	</head>
 	<body>
 		<center>
-			<iframe src="/index.html" frameBorder="0" scrolling="no" style="width: 100%; height: 102px;"></iframe>
-			<div style="width: 80%;">
-				<br>
-				<p>This is a list of what I consider to be some of the greatest beatmaps of all time. You may not agree for all, but most of these certainly are deserving of the masterpiece title. I urge you if you are a player or mapper who has never seen any of these before to take the time and play through them at least once in your life.</p>
-				<br>
-				<p class="masterpiece"><a href="https://osu.ppy.sh/beatmapsets/108296#osu/283252">Oratorio The World God Only Knows - God only knows -Secrets of the Goddess-</a> by Guy</p>
-				<p class="masterpiece"><a href="https://osu.ppy.sh/beatmapsets/45031#osu/140820">wac - neu</a> by Nakagawa-Kanon</p>
-				<p class="masterpiece"><a href="https://osu.ppy.sh/beatmapsets/97433#osu/260489">Traktion - The Near Distant Future</a> by RLC</p>
-				<p class="masterpiece"><a href="https://osu.ppy.sh/beatmapsets/79498#osu/221777">Infected Mushroom - The Pretender</a> by RLC</p>
-				<p class="masterpiece"><a href="https://osu.ppy.sh/beatmapsets/107565#osu/281843">Demetori - Crimson Belvedere ~ Eastern Dream</a> by jonathanlfj</p>
-				<p class="masterpiece"><a href="https://osu.ppy.sh/beatmapsets/13223#osu/53554">Demetori - Emotional Skyscraper ~ World's End</a> by happy30</p>
-				<p class="masterpiece"><a href="https://osu.ppy.sh/beatmapsets/806859#osu/1693575">Camellia feat. Nanahira - Bassdrop Freaks (2018 "Redrop" ver.)</a> by Mir</p>
-				<p class="masterpiece"><a href="https://osu.ppy.sh/beatmapsets/724192#osu/1529189">Ne Obliviscaris - Painters of the Tempest (Part II): Triptych Lux</a> by mithew</p>
-				<p class="masterpiece"><a href="https://osu.ppy.sh/beatmapsets/593032#osu/1254678">Tenacious D - BEELZEBOSS (THE FINAL SHOWDOWN)</a> by CookieBite</p>
-				<p class="masterpiece"><a href="https://osu.ppy.sh/beatmapsets/580215#osu/1279490">Rita - dorchadas</a> by Delis</p>
-				<p class="masterpiece"><a href="https://osu.ppy.sh/beatmapsets/530818#osu/1125109">AVTechNO!xTreow - DYE/Re:flection+</a> by dsco</p>
-				<p class="masterpiece"><a href="https://osu.ppy.sh/beatmapsets/286414#osu/646609">Camellia - dreamless wanderer</a> by Skystar</p>
-				<p class="masterpiece"><a href=""></a></p>
-				<p class="masterpiece"><a href=""></a></p>
+			<p id="about" />
+			<div id="content">
+				<div style="width: 80%;">
+					<table class="header">
+						<tr class="header">
+							<td class="header">
+								<p style="font-size: 36pt; display: inline;">willy</p>
+							</td>
+							<td class="header">
+								<p style="font-size: 14pt; display: inline;">circle clicker who makes circle clicking videos</p>
+								<br>
+								<p style="font-size: 14pt; display: inline;">osu! player for over six years and creator for many more</p>
+							</td>
+						</tr>
+					</table>
+					<a style="margin: 0 7pt;" href="https://www.youtube.com/user/fartingbrain">WILLY</a>
+					<a style="margin: 0 7pt;" href="https://www.youtube.com/user/keruteka">WILLY2</a>
+					<a style="margin: 0 7pt;" href="https://www.youtube.com/channel/UC7haJEUDdIrBXOvBbjdCB6A">THE GUYS</a>
+					<a style="margin: 0 7pt;" href="https://www.youtube.com/user/cookiezireplays">COOKIEZI REPLAYS</a>
+				</div>
+			</div>
+			<div id="banner">
+				<video style="width: 100%; height: 100%; object-fit: cover; overflow: hidden; pointer-events: none; box-sizing: border-box;" autoplay loop muted>
+					<source src="background.mp4" type="video/mp4">
+				</video>
+				<div class="header" id="menu">
+					<table class="header" style="height: 60px;">
+						<tr class="header">
+							<td class="header">
+								<a class="header" target="_top" href="/index"><img class="rotateimg" style="display: inline; height: 72px;" src="/logo.png" /></a>
+							</td>
+							<td class="header">
+								<ul class="header">
+									<li class="header"><a class="header" target="_top" href="https://discord.gg/willy">discord</a></li>
+									<li class="header"><a class="header" target="_top" href="https://www.youtube.com/user/fartingbrain">youtube</a></li>
+									<li class="header"><a class="header" target="_top" href="https://twitter.com/willyosu">twitter</a></li>
+									<li class="header"><a class="header" target="_top" href="https://osu.ppy.sh/u/3521482">osu!</a></li>
+									<li class="header"><a class="header" target="_top" href="https://www.twitch.tv/willly">twitch</a></li>
+								</ul>
+								<br />
+								<ul class="header">
+									<li class="header" style="font-size:12pt"><a class="header" target="_top" href="/skin">skin</a></li>
+									<li class="header" style="font-size:12pt"><a class="header" target="_top" href="#about">about</a></li>
+									<li class="header" style="font-size:12pt"><a class="header" target="_top" href="/masterpieces">masterpieces</a></li>
+								</ul>
+							</td>
+						</tr>
+					</table>
+				</div>
 			</div>
 		</center>
 	</body>
