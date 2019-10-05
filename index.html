@@ -9,7 +9,7 @@
 		<style>
 			ul.header { display: inline; list-style-type: none; font-size: 20pt; color: rgba(0, 0, 0, 0.0); margin: 0; padding: 0; }
 			li.header { color: inherit; float: left; }
-			div#banner { position: relative; width: 100%; height: 100%; transition: height 0.25s linear 0s; }
+			div#banner { position: relative; width: 100%; height: 100%; top: -3px; transition: height 0.25s linear 0s; }
 			div#content { position: absolute; width: 100%; height: 100%; transition: height 0.25s linear 0s; }
 			div.header { font-family: 'Abel', sans-serif !important; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; color: #ffffff; background-color: rgba(0, 0, 0, 1.00); }
 			a.header { color: #ffffff;; font-weight: 900; text-decoration: none; display: block; padding: 4px 12px; }
@@ -35,7 +35,7 @@
 					content.style.height = document.body.clientHeight;
 					content.style.top = document.body.clientHeight-3;
 					banner.style.height = "100%";
-					banner.style.top = 0-3;
+					banner.style.top = -3;
 					menu.style.top = "50%";
 					menu.style.backgroundColor = "rgba(0, 0, 0, 1.00)";
 				}
