@@ -9,23 +9,20 @@
 		<link rel="icon" type="image/png" href="/favicon.png">
 		<script>
 			function yScroll(){
-				banner = document.getElementById("banner");
-				menu = document.getElementById("menu");
-				content = document.getElementById("content")
+				header = document.getElementById("header");
+				container = document.getElementById("container");
 				if(window.pageYOffset > 0) {
-					content.style.height = document.body.clientHeight-menu.offsetHeight;
-					content.style.top = menu.offsetHeight-3;
-					banner.style.height = menu.offsetHeight;
-					banner.style.top = window.pageYOffset-3;
-					menu.style.top = (menu.offsetHeight/2);
-					menu.style.backgroundColor = "rgba(0, 0, 0, 0.50)";
+					if(window.pageYOffset <= (document.body.clientHeight-110)) {
+						container.style.height = document.body.clientHeight-window.pageYOffset;
+						squashFactor = window.pageYOffset/(document.body.clientHeight-110);
+						header.style.backgroundColor = "rgba(0, 0, 0, "+(1-(squashFactor/2)).toString()+")";
+					} else {
+						container.style.height = "110px";
+						header.style.backgroundColor = "rgba(0, 0, 0, 0.50)";
+					}
 				} else {
-					content.style.height = document.body.clientHeight;
-					content.style.top = document.body.clientHeight-3;
-					banner.style.height = "100%";
-					banner.style.top = -3;
-					menu.style.top = "50%";
-					menu.style.backgroundColor = "rgba(0, 0, 0, 1.00)";
+					container.style.height = "100vh";
+					header.style.backgroundColor = "rgba(0, 0, 0, 1.00)";
 				}
 			}
 			window.addEventListener("scroll", yScroll);
@@ -33,34 +30,35 @@
 	</head>
 	<body>
 		<center>
-			<div id="banner">
-				<video style="width: 100%; height: 100%; object-fit: cover; overflow: hidden; pointer-events: none; box-sizing: border-box;" autoplay loop muted>
-					<source src="background.mp4" type="video/mp4">
-				</video>
-				<div class="header" id="menu">
-					<table class="header" style="height: 60px;">
-						<tr class="header">
-							<td class="header">
-								<a class="header" target="_top" href="/index"><img class="rotateimg" style="display: inline; height: 72px;" src="/logo.png" /></a>
+			<div id="container" style="height: 100vh;">
+				<header id="header" style="background-color: rgba(0, 0, 0, 1.00);">
+					<table>
+						<tr>
+							<td>
+								<a href="/index"><img style="display: inline; height: 72px;" src="logo.png" /></a>
 							</td>
-							<td class="header">
-								<ul class="header">
-									<li class="header"><a class="header" target="_top" href="https://discord.gg/willy">discord</a></li>
-									<li class="header"><a class="header" target="_top" href="https://www.youtube.com/user/fartingbrain">youtube</a></li>
-									<li class="header"><a class="header" target="_top" href="https://twitter.com/willyosu">twitter</a></li>
-									<li class="header"><a class="header" target="_top" href="https://osu.ppy.sh/u/3521482">osu!</a></li>
-									<li class="header"><a class="header" target="_top" href="https://www.twitch.tv/willly">twitch</a></li>
+							<td>
+								<ul>
+									<li><a href="https://discord.gg/willy">discord</a></li>
+									<li><a href="https://www.youtube.com/user/fartingbrain">youtube</a></li>
+									<li><a href="https://twitter.com/willyosu">twitter</a></li>
+									<li><a href="https://osu.ppy.sh/u/3521482">osu!</a></li>
+									<li><a href="https://www.twitch.tv/willly">twitch</a></li>
 								</ul>
-								<br />
-								<ul class="header">
-									<li class="header" style="font-size:12pt"><a class="header" target="_top" href="/skin">skin</a></li>
-									<li class="header" style="font-size:12pt"><a class="header" target="_top" href="/masterpieces">masterpieces</a></li>
-									<li class="header" style="font-size:12pt"><a class="header" target="_top" href="/ranking">ranking</a></li>
-								</ul>
+								<br>
+								<a href="#content" style="font-style: italic;">see more...</a>
 							</td>
 						</tr>
 					</table>
-				</div>
+				</header>
+				<video style="width: 100%; height: 100%; object-fit: cover; overflow: hidden; pointer-events: none; box-sizing: border-box;" autoplay loop muted>
+					<source src="background.mp4" type="video/mp4">
+				</video>
+			</div>
+			<div id="content" style="top: 100%; width: 100%; padding-top: 110px; height: 100vh;">
+				<br>
+					<p style="font-size: 36pt; font-style: italic;">coming soon</p><p style="text-shadow: 0 0 4px #eeeeee; font-size: 72pt;">?</p>
+				<br>
 			</div>
 		</center>
 	</body>
