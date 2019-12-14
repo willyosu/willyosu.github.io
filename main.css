@@ -62,7 +62,17 @@ header {
 	background-color: rgba(0, 0, 0, 0.50);
 	z-index: 10;
 	top: 50%;
-	
+}
+.project {
+	font-weight: normal;
+	text-align: left;
+	padding: 4pt;
+}
+.project img {
+	float: left;
+	border-radius: 50%;
+	height: 45pt;
+	margin-right: 8pt;
 }
 #container {
 	width: 100%;
