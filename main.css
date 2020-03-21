@@ -4,8 +4,9 @@ body {
 	width: 100%;
 	height: 100%;
 	margin: 0pt auto;
-	color: #eeeeee;
-	background-color: #121212;
+	text-shadow: 2px 2px 0px rgb(255, 177, 19);
+	color: rgb(130, 30, 30);
+	background-color: rgb(254, 212, 41);
 	position: relative;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -14,74 +15,37 @@ p {
 	font-size: 12pt;
 	margin: 2pt;
 	padding: 0pt;
+	font-weight: 600;
 }
 a {
-	color: #eeeeee;
-	font-weight: bold;
+	color: rgb(130, 30, 30);
+	font-weight: 700;
 	text-decoration: none;
 }
 a:hover {
-	color: #eeeeee;
+	color: rgb(130, 30, 30);
 	text-decoration: underline;
 }
-header ul { 
+header ul {
 	display: inline;
+	width: 100%;
 	list-style-type: none;
 	font-size: 20pt;
 	color: rgba(0, 0, 0, 0.0);
 	margin: 0;
-	padding: 0;  
+	padding: 0;
 }
-header li { 
+header li {
 	color: inherit;
-	float: left; 
-}
-header a { 
-	color: #ffffff;
-	display: block;
-	padding: 4px 8px; 
-}
-header table { 
-	border-collapse: separate;
-	margin: 5px; 
-}
-header tr { 
-	vertical-align: middle;
-}
-header td { 
-	vertical-align: inherit;
-	padding: 8px; 
+	display: inline-block;
+	padding: 8px 16px;
 }
 header {
-	height: 110px;
 	width: 100%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	position: absolute;
-	color: #ffffff;
-	background-color: rgba(0, 0, 0, 0.50);
+	color: inherit;
 	z-index: 10;
 	top: 50%;
-}
-.project {
-	font-weight: normal;
-	text-align: left;
-	padding: 4pt;
-}
-.project img {
-	float: left;
-	border-radius: 50%;
-	height: 45pt;
-	margin-right: 8pt;
-}
-#container {
-	width: 100%;
-	height: 110px;
-	position: fixed;
-	z-index: 10;
-	top: 0;
-}
-#content {
-	width: 100%;
-	position: absolute;
 }
